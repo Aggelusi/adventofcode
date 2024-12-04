@@ -20,11 +20,7 @@ int main() {
                 if (pinax[i][j] == 'X' && pinax[i][j+1] == 'M' && pinax[i][j+2] == 'A' && pinax[i][j+3] == 'S') {
                     word_count++;
                 }
-            }
-        }
-        for (j = 139; j > -1; j--) {
-            if (j - 3 > -1) {
-                if (pinax[i][j] == 'X' && pinax[i][j-1] == 'M' && pinax[i][j-2] == 'A' && pinax[i][j-3] == 'S') {
+                if (pinax[i][j] == 'S' && pinax[i][j+1] == 'A' && pinax[i][j+2] == 'M' && pinax[i][j+3] == 'X') {
                     word_count++;
                 }
             }
@@ -36,15 +32,12 @@ int main() {
                 if (pinax[i][j] == 'X' && pinax[i+1][j] == 'M' && pinax[i+2][j] == 'A' && pinax[i+3][j] == 'S') {
                     word_count++;
                 }
-            }
-        }
-        for (i = 139; i > -1; i--) {
-            if (i - 3 > -1) {
-                if (pinax[i][j] == 'X' && pinax[i-1][j] == 'M' && pinax[i-2][j] == 'A' && pinax[i-3][j] == 'S') {
+                if (pinax[i][j] == 'S' && pinax[i+1][j] == 'A' && pinax[i+2][j] == 'M' && pinax[i+3][j] == 'X') {
                     word_count++;
                 }
             }
         }
     }
+    
     return 0;
 }
